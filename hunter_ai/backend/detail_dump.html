@@ -1,0 +1,572 @@
+<!DOCTYPE html><html lang="pl"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Wpisz kod</title>
+<!--        <title>Wyszukiwarka publiczna RWDZ GUNB</title> -->
+
+        <!-- Bootstrap -->
+        <link href="https://wyszukiwarka.gunb.gov.pl//Css/bootstrap.min.css?20260501124326" rel="stylesheet">
+        <link href="https://wyszukiwarka.gunb.gov.pl//Css/bootstrap-datepicker.min.css?20260501124326" rel="stylesheet">
+        <link href="https://wyszukiwarka.gunb.gov.pl//Css/style.css?20260501124326" rel="stylesheet">
+        <link href="https://wyszukiwarka.gunb.gov.pl//Css/map.css?20260501124326" rel="stylesheet">
+        <link href="https://wyszukiwarka.gunb.gov.pl//Css/ol.css?20260501124326" rel="stylesheet" type="text/css">
+                        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css?20260501124326">
+
+        <script async="" src="https://scripts.clarity.ms/0.8.61/clarity.js"></script><script async="" src="https://www.clarity.ms/tag/o525da1094"></script><script type="text/javascript" async="" src="https://files.startquestion.com/dist/widget/embeddable.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+        <!-- Script added by PZ for RWDZ-16 adding a survey to the public search page of RWDZ -->
+        <script type="text/javascript">
+        !function(e,t,n,a,r){
+            var l=e.Startquestion=e.Startquestion||{};
+            if(l.invoked){
+                e.console&&console.warn&&console.warn("Startquestion snippet included twice.");
+                return
+            }
+            l.invoked=!0,l.queue=[],l.call=function(){
+                l.queue.push(Array.prototype.slice.call(arguments))
+            };
+            var s=t.createElement("script");
+            s.type="text/javascript",s.async=!0,s.src=n;
+            var p=t.getElementsByTagName("script")[0];
+            p.parentNode.insertBefore(s,p),l.call({
+                type:"load",
+                config:{
+                    key:a,
+                    api:r
+                }
+            })
+        }(
+            window,
+            document,
+            'https://files.startquestion.com/dist/widget/embeddable.js',
+            '56ef6afa-5cc2-4fff-b5c9-2fbe3f1cb516',
+            'https://app.startquestion.com'
+        );
+        </script>
+
+
+        <!-- Google tag (gtag.js) -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-T0F03YXF74"></script>
+        
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+
+          gtag('config', 'G-T0F03YXF74');
+        </script>
+        
+
+        <!-- Clarity analytics -->
+        
+        <script type="text/javascript">
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "o525da1094");
+        </script>
+        
+
+    </head>
+    <body data-spy="scroll" data-target="#nav2"> 
+        <a class="sr-only" name="top" id="top"></a>
+        <a href="#content-anchor" class="sr-only sr-only-focusable">Przejdź do treści</a>
+        <a href="#main-nav" class="sr-only sr-only-focusable">Przejdź do menu</a>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Wyłącz / włącz nawigację</span>
+                    </button>
+                    <a class="navbar-brand" href="/"><abbr title="Główny Urząd Nadzoru Budowlanego">GUNB</abbr></a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <a id="main-nav" name="main-nav"></a>
+                    <ul class="nav navbar-nav">
+                            <li class="active"><a href="/">Wyszukiwarka 
+        <span class="sr-only">(obecnie wybrany)</span></a></li>
+
+                            <li><a href="/mapa/">Wyszukiwanie na mapie 
+        </a></li>
+
+                            <li><a href="/urzedy/">Kontakt z urzędem 
+        </a></li>
+
+                            <li><a href="/deklaracja-dostepnosci/">Deklaracja dostępności 
+        </a></li>
+
+                            <li><a href="/o-wyszukiwarce/">O wyszukiwarce 
+        </a></li>
+
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right accessibility-controls">
+                        <li class="font-standard"><a href="/changeStyle/?font=st" title="Standardowy rozmiar czcionki">A</a></li>
+                        <li class="font-bigger"><a href="/changeStyle/?font=plus" title="Powiększony rozmiar czcionki">A+</a></li>
+                        <li class="font-biggest"><a href="/changeStyle/?font=plusplus" title="Mocno powiększony rozmiar czcionki">A++</a></li>
+                        <li class="high-contrast"><a href="/changeStyle/?contrast=c1" title="Wysoki kontrast"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="main">
+                        <div id="menu" class="col-md-2 col-lg-offset-1 col-lg-2 hidden-sm">
+                <ul id="nav" class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="/">Wyszukiwarka 
+        <span class="sr-only">(obecnie wybrany)</span></a></li>
+
+                        <li><a href="/mapa/">Wyszukiwanie na mapie 
+        </a></li>
+
+                        <li><a href="/urzedy/">Kontakt z urzędem 
+        </a></li>
+
+                        <li><a href="/deklaracja-dostepnosci/">Deklaracja dostępności 
+        </a></li>
+
+                        <li><a href="/o-wyszukiwarce/">O wyszukiwarce 
+        </a></li>
+
+                </ul>
+
+                <div id="gunbinfo2" class="text-left hidden-xs hidden-sm">
+                    <span>Wyszukiwarkę udostępnia:</span>
+                    <address>
+                        <b>Główny Urząd Nadzoru Budowlanego</b> <br>
+                        ul. Krucza 38/42 <br>
+                        00-926 Warszawa
+                    </address>
+                </div>
+                <!--moje -->
+             <div id="gunbinfo_pobranie" class="text-left hidden-xs hidden-sm">
+                    <span>Dane z wyszukiwarki do pobrania w formacie CSV</span>
+                    <address>
+                    <a href="https://wyszukiwarka.gunb.gov.pl/pobranie.html">Dane do pobrania</a>
+                    </address>
+                </div>
+             <!--    koniec moje  -->
+
+            </div>
+                                    <div id="content" class="col-md-10 col-lg-7 panel panel-default">
+                            <a id="content-anchor" name="content-anchor"></a>
+                <div class="panel-body">
+        <div id="header" class="page-header col-md-12">
+        <h1>Wyszukiwarka publiczna <abbr title="Rejestr wniosków, decyzji i zgłoszeń">RWDZ</abbr></h1>
+        <h2>
+                            <small> Szczegóły wniosku: <b>AB.6740.1.167.2026</b></small>
+                    </h2>
+    </div>
+
+        <div class="alert alert-info col-md-12">
+            Aby wyświetlić szczegóły wniosku konieczne jest podanie <b>kodu zabezpieczającego</b>. Podanie kodu pozwoli na wyświetlenie 10 kolejnych informacji o wniosku lub zgłoszeniu.
+        </div>
+
+    <form id="search" class="form-horizontal">
+
+        <div class="form-group">
+            <label for="sec_code" class="col-sm-4 control-label">Wpisz kod znajdujący się na obrazku poniżej:</label>
+            <div class="col-sm-6">
+                <input class="form-control" name="sec_code" id="sec_code" autocomplete="off">
+                <input type="hidden" name="query_string" value="">
+                <audio id="captcha_image_audio" preload="none" style="display: none">
+                    <source id="captcha_image_source_mp3" src="/securimage_play.php?id=1777632206&amp;format=mp3" type="audio/mpeg">
+                    <source id="captcha_image_source_wav" src="/securimage_play.php?id=1777632206" type="audio/wav">
+                    
+                </audio>
+                <img id="sec_code_captcha" src="/securimage_show.php?1777632206" alt="CAPTCHA">
+            </div>
+                        <div class="col-sm-1" id="captcha_image_audio_controls">
+                    <a class="captcha_play_button" href="/securimage_play.php?id=1777632206" onclick="return false">
+                    <img class="captcha_play_image" height="32" width="32" src="/Img/audio_icon.png" alt="Wypowiedz kod captcha" style="border: 0px">
+                    </a>
+                    <noscript>Włącz Javascript aby wypowiedzieć captchę</noscript>
+            </div>
+                    </div>
+
+        <div class="col-md-offset-4">
+            <button type="submit" name="submit" value="submit" class="btn btn-default search"><span class="glyphicon glyphicon-chevron-right text-primary" aria-hidden="true"></span> Przejdź dalej</button>
+        </div>
+    </form>
+
+    <script type="text/javascript" src="/securimage.js"></script>
+    <script type="text/javascript">
+        captcha_image2_audioObj = new SecurimageAudio({ audioElement: 'captcha_image_audio', controlsElement: 'captcha_image_audio_controls' });
+    </script>
+</div>
+
+            </div>
+
+                        <div id="content" class="footer col-lg-offset-3 col-md-offset-2 col-md-10 col-lg-7">
+                    </div>
+
+        <script src="https://wyszukiwarka.gunb.gov.pl//Js/bootstrap.min.js"></script>
+        <script src="https://wyszukiwarka.gunb.gov.pl//Js/bootstrap-datepicker.min.js"></script>
+        <script src="https://wyszukiwarka.gunb.gov.pl//Js/script.js"></script>
+        <script src="https://wyszukiwarka.gunb.gov.pl//Js/map/config/cities.js"></script>
+    
+
+</div><div id="startquestion-container"><style>
+    
+  
+@-webkit-keyframes sq-scale-in-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes sq-scale-in-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sq-scale-in-right {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes sq-scale-in-right {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sq-scale-in-top {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes sq-scale-in-top {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sq-scale-in-bottom {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes sq-scale-in-bottom {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sq-scale-in-top-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes sq-scale-in-top-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sq-scale-in-top-right {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes sq-scale-in-top-right {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sq-scale-in-bottom-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes sq-scale-in-bottom-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sq-scale-in-bottom-right {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes sq-scale-in-bottom-right {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sq-fade-in {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes sq-fade-in {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+  
+.sq-entrance-center-left {
+  -webkit-animation: sq-scale-in-left 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: sq-scale-in-left 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.sq-entrance-center-right {
+  -webkit-animation: sq-scale-in-right 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: sq-scale-in-right 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.sq-entrance-top-center {
+  -webkit-animation: sq-scale-in-top 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: sq-scale-in-top 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.sq-entrance-bottom-center {
+  -webkit-animation: sq-scale-in-bottom 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: sq-scale-in-bottom 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.sq-entrance-top-left {
+  -webkit-animation: sq-scale-in-top-left 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: sq-scale-in-top-left 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.sq-entrance-top-right {
+  -webkit-animation: sq-scale-in-top-right 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: sq-scale-in-top-right 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.sq-entrance-bottom-left {
+  -webkit-animation: sq-scale-in-bottom-left 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: sq-scale-in-bottom-left 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.sq-entrance-bottom-right {
+  -webkit-animation: sq-scale-in-bottom-right 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: sq-scale-in-bottom-right 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.sq-entrance-center-center {
+  -webkit-animation: sq-fade-in 0.35s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: sq-fade-in 0.35s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+  </style></div></body></html>

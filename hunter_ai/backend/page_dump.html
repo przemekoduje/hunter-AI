@@ -1,0 +1,1847 @@
+<!DOCTYPE html><html lang="pl"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Wyszukiwarka publiczna RWDZ GUNB</title>
+<!--        <title>Wyszukiwarka publiczna RWDZ GUNB</title> -->
+
+        <!-- Bootstrap -->
+        <link href="https://wyszukiwarka.gunb.gov.pl//Css/bootstrap.min.css?20260501122211" rel="stylesheet">
+        <link href="https://wyszukiwarka.gunb.gov.pl//Css/bootstrap-datepicker.min.css?20260501122211" rel="stylesheet">
+        <link href="https://wyszukiwarka.gunb.gov.pl//Css/style.css?20260501122211" rel="stylesheet">
+        <link href="https://wyszukiwarka.gunb.gov.pl//Css/map.css?20260501122211" rel="stylesheet">
+        <link href="https://wyszukiwarka.gunb.gov.pl//Css/ol.css?20260501122211" rel="stylesheet" type="text/css">
+                        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css?20260501122211">
+
+        <script async="" src="https://scripts.clarity.ms/0.8.61/clarity.js"></script><script async="" src="https://www.clarity.ms/tag/o525da1094"></script><script type="text/javascript" async="" src="https://files.startquestion.com/dist/widget/embeddable.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+        <!-- Script added by PZ for RWDZ-16 adding a survey to the public search page of RWDZ -->
+        <script type="text/javascript">
+        !function(e,t,n,a,r){
+            var l=e.Startquestion=e.Startquestion||{};
+            if(l.invoked){
+                e.console&&console.warn&&console.warn("Startquestion snippet included twice.");
+                return
+            }
+            l.invoked=!0,l.queue=[],l.call=function(){
+                l.queue.push(Array.prototype.slice.call(arguments))
+            };
+            var s=t.createElement("script");
+            s.type="text/javascript",s.async=!0,s.src=n;
+            var p=t.getElementsByTagName("script")[0];
+            p.parentNode.insertBefore(s,p),l.call({
+                type:"load",
+                config:{
+                    key:a,
+                    api:r
+                }
+            })
+        }(
+            window,
+            document,
+            'https://files.startquestion.com/dist/widget/embeddable.js',
+            '56ef6afa-5cc2-4fff-b5c9-2fbe3f1cb516',
+            'https://app.startquestion.com'
+        );
+        </script>
+
+
+        <!-- Google tag (gtag.js) -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-T0F03YXF74"></script>
+        
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+
+          gtag('config', 'G-T0F03YXF74');
+        </script>
+        
+
+        <!-- Clarity analytics -->
+        
+        <script type="text/javascript">
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "o525da1094");
+        </script>
+        
+
+    </head>
+    <body data-spy="scroll" data-target="#nav2"> 
+        <a class="sr-only" name="top" id="top"></a>
+        <a href="#content-anchor" class="sr-only sr-only-focusable">Przejdź do treści</a>
+        <a href="#main-nav" class="sr-only sr-only-focusable">Przejdź do menu</a>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Wyłącz / włącz nawigację</span>
+                    </button>
+                    <a class="navbar-brand" href="/"><abbr title="Główny Urząd Nadzoru Budowlanego">GUNB</abbr></a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <a id="main-nav" name="main-nav"></a>
+                    <ul class="nav navbar-nav">
+                            <li class="active"><a href="/">Wyszukiwarka 
+        <span class="sr-only">(obecnie wybrany)</span></a></li>
+
+                            <li><a href="/mapa/">Wyszukiwanie na mapie 
+        </a></li>
+
+                            <li><a href="/urzedy/">Kontakt z urzędem 
+        </a></li>
+
+                            <li><a href="/deklaracja-dostepnosci/">Deklaracja dostępności 
+        </a></li>
+
+                            <li><a href="/o-wyszukiwarce/">O wyszukiwarce 
+        </a></li>
+
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right accessibility-controls">
+                        <li class="font-standard"><a href="/changeStyle/?font=st" title="Standardowy rozmiar czcionki">A</a></li>
+                        <li class="font-bigger"><a href="/changeStyle/?font=plus" title="Powiększony rozmiar czcionki">A+</a></li>
+                        <li class="font-biggest"><a href="/changeStyle/?font=plusplus" title="Mocno powiększony rozmiar czcionki">A++</a></li>
+                        <li class="high-contrast"><a href="/changeStyle/?contrast=c1" title="Wysoki kontrast"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="main">
+                        <div id="menu" class="col-md-2 col-lg-offset-1 col-lg-2 hidden-sm">
+                <ul id="nav" class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="/">Wyszukiwarka 
+        <span class="sr-only">(obecnie wybrany)</span></a></li>
+
+                        <li><a href="/mapa/">Wyszukiwanie na mapie 
+        </a></li>
+
+                        <li><a href="/urzedy/">Kontakt z urzędem 
+        </a></li>
+
+                        <li><a href="/deklaracja-dostepnosci/">Deklaracja dostępności 
+        </a></li>
+
+                        <li><a href="/o-wyszukiwarce/">O wyszukiwarce 
+        </a></li>
+
+                </ul>
+
+                <div id="gunbinfo2" class="text-left hidden-xs hidden-sm">
+                    <span>Wyszukiwarkę udostępnia:</span>
+                    <address>
+                        <b>Główny Urząd Nadzoru Budowlanego</b> <br>
+                        ul. Krucza 38/42 <br>
+                        00-926 Warszawa
+                    </address>
+                </div>
+                <!--moje -->
+             <div id="gunbinfo_pobranie" class="text-left hidden-xs hidden-sm">
+                    <span>Dane z wyszukiwarki do pobrania w formacie CSV</span>
+                    <address>
+                    <a href="https://wyszukiwarka.gunb.gov.pl/pobranie.html">Dane do pobrania</a>
+                    </address>
+                </div>
+             <!--    koniec moje  -->
+
+            </div>
+                                    <div id="content" class="col-md-10 col-lg-7 panel panel-default">
+                            <a id="content-anchor" name="content-anchor"></a>
+                <div class="panel-body">
+        <div id="header" class="page-header col-md-offset-1 col-md-10">
+        <div style="text-align: center;">
+             <a href="https://www.gunb.gov.pl"><img title="Główny Urząd Nadzoru Budowlanego" alt="GUNB" src="/Img/gunb30.png" width="300"></a>
+        </div>
+	<a href="/o-wyszukiwarce/#projektue"><img class="img-responsive" title="Unia Europejska - Europejski Fundusz Społeczny -Wiedz Edukacja Rozwój" alt="Unia Europejska - Europejski Fundusz Społeczny -Wiedza Edukacja Rozwój" src="/Img/ue.png"></a>
+        <h1>Wyszukiwarka publiczna <abbr title="Rejestr wniosków, decyzji i zgłoszeń">RWDZ</abbr></h1>
+        <br>
+        <div class="alert alert-info">
+          <span aria-hidden="true">Witamy na stronie <b>wyszukiwarki Rejestru Wniosków, Decyzji i Zgłoszeń</b> w sprawach budowlanych.</span> Możesz wyszukiwać po dowolnych wprowadzonych kryteriach. Żadne z pól nie jest obowiązkowe.
+        </div>
+    </div>
+
+    <form id="search" class="form-horizontal">
+
+        <label for="rwd_document_type" class="col-sm-4 control-label">Rodzaj wyszukiwania</label>
+        <div id="rodzaj" class="col-sm-6 form-group">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="document_type" value="rwd" checked="checked">
+                    Wyszukiwanie pozwoleń na budowę
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="document_type" value="rz">
+                    Wyszukiwanie zgłoszeń zamierzenia budowlanego
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <h4 class="col-sm-offset-4 col-sm-6 text-primary">Informacje o dokumencie</h4>
+        </div>
+
+        <div class="form-group">
+                        <label for="rwd_document_type" class="col-sm-4 control-label">Typ dokumentu (Rejestr Wniosków i Decyzji)</label>
+            <div class="col-sm-6">
+                <select class="form-control" name="rwd_document_type" id="rwd_document_type">
+                    <option>
+                        Dowolny
+                    </option>
+                    <option>
+                        W trakcie rozpatrywania
+                    </option>
+                    <option>
+                        Wycofany przez inwestora
+                    </option>
+                    <option>
+                        Bez rozpatrzenia
+                    </option>
+                    <option>
+                        Decyzja pozytywna
+                    </option>
+                    <option>
+                        Decyzja odmowna
+                    </option>
+                    <option>
+                        Decyzja umarzająca
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group" style="display: none;">
+                        <label for="rz_document_type" class="col-sm-4 control-label">Typ dokumentu (Rejestr Zgłoszeń)</label>
+            <div class="col-sm-6">
+                <select class="form-control" name="rz_document_type" id="rz_document_type" disabled="">
+                    <option>
+                        Dowolny
+                    </option>
+                    <option>
+                        Sprawa w toku
+                    </option>
+                    <option>
+                        Brak sprzeciwu
+                    </option>
+                    <option>
+                        Decyzja o sprzeciwie
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+                        <label for="request_number" class="col-sm-4 control-label">Numer ewidencyjny wniosku</label>
+            <div class="col-sm-6">
+                <input class="form-control" name="request_number" id="request_number" value="">
+            </div>
+        </div>
+        <div class="form-group" style="display: none;">
+                        <label for="notification_number" class="col-sm-4 control-label">Numer ewidencyjny zgłoszenia</label>
+            <div class="col-sm-6">
+                <input class="form-control" name="notification_number" id="notification_number" value="" disabled="">
+            </div>
+        </div>
+        <div class="form-group">
+                        <label for="decision_number" class="col-sm-4 control-label">Numer ewidencyjny decyzji</label>
+            <div class="col-sm-6">
+                <input class="form-control" name="decision_number" id="decision_number" value="">
+            </div>
+        </div>
+
+        <!--<div class="form-group">
+                        <span id="helpBlock" class="sr-only col-sm-offset-4 col-sm-6 help-block">Format daty to RRRR-MM-DD</span>
+            <label for="date_min" class="col-sm-4 control-label">Minimalna data złożenia wniosku lub zgłoszenia</label>
+            <div class="col-sm-6">
+                <input class="form-control" name="date_min" id="date_min" value="" placeholder="Format daty to RRRR-MM-DD">
+            </div>
+        </div>
+        <div class="form-group">
+                        <label for="date_max" class="col-sm-4 control-label">Maksymalna data złożenia wniosku lub zgłoszenia</label>
+            <div class="col-sm-6">
+                <input class="form-control" name="date_max" id="date_max" value="" placeholder="Format daty to RRRR-MM-DD">
+            </div>
+        </div>-->
+
+        <div class="form-group">
+                        <label class="col-sm-4 control-label">Data złożenia<br> wniosku / zgłoszenia</label>
+            <div class="col-sm-6 form-inline">
+                <label for="date_min" class="control-label" style="width: 8%; height: 34px; text-align: left;">od</label>
+                <input class="form-control" name="date_min" id="date_min" value="" placeholder="RRRR-MM-DD" style="width: 40%;">
+                <label for="date_max" class="control-label" style="width: 8%; height: 34px; text-align: center;">do</label>
+                <input class="form-control" name="date_max" id="date_max" value="" placeholder="RRRR-MM-DD" style="width: 40%;">
+            </div>
+        </div>
+
+        <div class="form-group">
+                        <label class="col-sm-4 control-label">Data wydania decyzji</label>
+            <div class="col-sm-6 form-inline">
+                <label for="decision_date_min" class="control-label" style="width: 8%; height: 34px; text-align: left;">od</label>
+                <input class="form-control" name="decision_date_min" id="decision_date_min" value="" placeholder="RRRR-MM-DD" style="width: 40%;">
+                <label for="decision_date_max" class="control-label" style="width: 8%; height: 34px; text-align: center;">do</label>
+                <input class="form-control" name="decision_date_max" id="decision_date_max" value="" placeholder="RRRR-MM-DD" style="width: 40%;">
+            </div>
+        </div>
+
+        <div class="row">
+            <h4 class="col-sm-offset-4 col-sm-6 text-primary">Właściwość miejscowa</h4>
+        </div>
+
+        <div class="form-group">
+                        <label for="organ_region" class="col-sm-4 control-label">Województwo</label>
+            <div class="col-sm-6">
+                <select class="form-control" name="organ_region" id="organ_region">
+                                            <option value="all">Cała Polska</option>
+
+                                            <option value="259">dolnośląskie</option>
+
+                                            <option value="260">kujawsko-pomorskie</option>
+
+                                            <option value="261">łódzkie</option>
+
+                                            <option value="5">lubelskie</option>
+
+                                            <option value="6">lubuskie</option>
+
+                                            <option value="7">małopolskie</option>
+
+                                            <option value="8">mazowieckie</option>
+
+                                            <option value="9">opolskie</option>
+
+                                            <option value="10">podkarpackie</option>
+
+                                            <option value="11">podlaskie</option>
+
+                                            <option value="12">pomorskie</option>
+
+                                            <option value="13">śląskie</option>
+
+                                            <option value="14">świętokrzyskie</option>
+
+                                            <option value="262">warmińsko-mazurskie</option>
+
+                                            <option value="15">wielkopolskie</option>
+
+                                            <option value="16">zachodniopomorskie</option>
+
+                                    </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+                        <label for="org" class="col-sm-4 control-label">Organ administracji</label>
+            <div class="col-sm-6">
+                <select class="form-control" name="org" id="org">
+                                            <option value="all">Dowolny</option>
+
+                                            <option value="p.190">Agencja Rozwoju Przemysłu S.A. oddział w Mielcu</option>
+
+                                            <option value="w.193">DSW</option>
+
+                                            <option value="p.451">DSW powiat</option>
+
+                                            <option value="w.191">GUNB</option>
+
+                                            <option value="p.445">Pomorska Specjalna Strefa Ekonomiczna sp. z o.o.</option>
+
+                                            <option value="p.440">Prezydent Miasta Biała Podlaska</option>
+
+                                            <option value="p.185">Prezydent Miasta Białegostoku</option>
+
+                                            <option value="p.169">Prezydent Miasta Bielsko-Biała</option>
+
+                                            <option value="p.335">Prezydent Miasta Bydgoszcz</option>
+
+                                            <option value="p.146">Prezydent Miasta Bytom</option>
+
+                                            <option value="p.438">Prezydent Miasta Chełm</option>
+
+                                            <option value="p.151">Prezydent Miasta Chorzów (Powiat grodzki)</option>
+
+                                            <option value="p.138">Prezydent Miasta Częstochowa</option>
+
+                                            <option value="p.145">Prezydent Miasta Dąbrowa Górnicza (Powiat grodzki)</option>
+
+                                            <option value="p.284">Prezydent Miasta Elbląg</option>
+
+                                            <option value="p.238">Prezydent Miasta Gdańsk</option>
+
+                                            <option value="p.239">Prezydent Miasta Gdynia</option>
+
+                                            <option value="p.152">Prezydent Miasta Gliwice</option>
+
+                                            <option value="p.245">Prezydent Miasta Gorzów Wielkopolski</option>
+
+                                            <option value="p.336">Prezydent Miasta Grudziądz</option>
+
+                                            <option value="p.170">Prezydent Miasta Jastrzębie Zdrój</option>
+
+                                            <option value="p.167">Prezydent Miasta Jaworzno</option>
+
+                                            <option value="p.243">Prezydent Miasta Jelenia Góra</option>
+
+                                            <option value="p.316">Prezydent Miasta Kalisz</option>
+
+                                            <option value="p.157">Prezydent Miasta Katowice</option>
+
+                                            <option value="p.118">Prezydent Miasta Kielce</option>
+
+                                            <option value="p.317">Prezydent Miasta Konin</option>
+
+                                            <option value="p.413">Prezydent Miasta Koszalin</option>
+
+                                            <option value="p.124">Prezydent Miasta Kraków </option>
+
+                                            <option value="p.194">Prezydent Miasta Krosno</option>
+
+                                            <option value="p.244">Prezydent Miasta Legnica</option>
+
+                                            <option value="p.318">Prezydent Miasta Leszno</option>
+
+                                            <option value="p.265">Prezydent Miasta Łódź</option>
+
+                                            <option value="p.186">Prezydent Miasta Łomża</option>
+
+                                            <option value="p.441">Prezydent Miasta Lublin</option>
+
+                                            <option value="p.165">Prezydent Miasta Mysłowice</option>
+
+                                            <option value="p.134">Prezydent Miasta Nowy Sącz</option>
+
+                                            <option value="p.285">Prezydent Miasta Olsztyn</option>
+
+                                            <option value="p.136">Prezydent Miasta Opole</option>
+
+                                            <option value="p.374">Prezydent Miasta Ostrołęka</option>
+
+                                            <option value="p.153">Prezydent Miasta Piekary Śląskie</option>
+
+                                            <option value="p.294">Prezydent Miasta Piekary Śląskie - old</option>
+
+                                            <option value="p.266">Prezydent Miasta Piotrków Trybunalski</option>
+
+                                            <option value="p.375">Prezydent Miasta Płock</option>
+
+                                            <option value="p.319">Prezydent Miasta Poznań</option>
+
+                                            <option value="p.192">Prezydent Miasta Przemyśl</option>
+
+                                            <option value="p.376">Prezydent Miasta Radom</option>
+
+                                            <option value="p.148">Prezydent Miasta Ruda Śląska</option>
+
+                                            <option value="p.155">Prezydent Miasta Rybnik</option>
+
+                                            <option value="p.191">Prezydent Miasta Rzeszów</option>
+
+                                            <option value="p.377">Prezydent Miasta Siedlce</option>
+
+                                            <option value="p.150">Prezydent Miasta Siemianowice Śląskie</option>
+
+                                            <option value="p.267">Prezydent Miasta Skieniewice</option>
+
+                                            <option value="p.240">Prezydent Miasta Słupsk</option>
+
+                                            <option value="p.241">Prezydent Miasta Sopotu</option>
+
+                                            <option value="p.154">Prezydent Miasta Sosnowiec</option>
+
+                                            <option value="p.187">Prezydent Miasta Suwałki</option>
+
+                                            <option value="p.149">Prezydent Miasta Świętochłowice</option>
+
+                                            <option value="p.415">Prezydent Miasta Świnoujście</option>
+
+                                            <option value="p.414">Prezydent Miasta Szczecin</option>
+
+                                            <option value="p.193">Prezydent Miasta Tarnobrzeg</option>
+
+                                            <option value="p.173">Prezydent Miasta Tarnów</option>
+
+                                            <option value="p.337">Prezydent Miasta Toruń</option>
+
+                                            <option value="p.164">Prezydent miasta Tychy</option>
+
+                                            <option value="p.419">Prezydent Miasta Wałbrzych</option>
+
+                                            <option value="p.396">Prezydent Miasta Warszawa</option>
+
+                                            <option value="p.378">Prezydent Miasta Warszawa - Bemowo</option>
+
+                                            <option value="p.379">Prezydent Miasta Warszawa - Białołęka</option>
+
+                                            <option value="p.380">Prezydent Miasta Warszawa - Bielany</option>
+
+                                            <option value="p.381">Prezydent Miasta Warszawa - Mokotów</option>
+
+                                            <option value="p.382">Prezydent Miasta Warszawa - Ochota</option>
+
+                                            <option value="p.383">Prezydent Miasta Warszawa - Praga Płd.</option>
+
+                                            <option value="p.384">Prezydent Miasta Warszawa - Praga Pn.</option>
+
+                                            <option value="p.385">Prezydent Miasta Warszawa - Rembertów</option>
+
+                                            <option value="p.386">Prezydent Miasta Warszawa - Śródmieście</option>
+
+                                            <option value="p.387">Prezydent Miasta Warszawa - Targówek</option>
+
+                                            <option value="p.388">Prezydent Miasta Warszawa - Ursus</option>
+
+                                            <option value="p.389">Prezydent Miasta Warszawa - Ursynów</option>
+
+                                            <option value="p.390">Prezydent Miasta Warszawa - Wawer</option>
+
+                                            <option value="p.391">Prezydent Miasta Warszawa - Wesoła</option>
+
+                                            <option value="p.392">Prezydent Miasta Warszawa - Wilanów</option>
+
+                                            <option value="p.393">Prezydent Miasta Warszawa - Włochy</option>
+
+                                            <option value="p.394">Prezydent Miasta Warszawa - Wola</option>
+
+                                            <option value="p.395">Prezydent Miasta Warszawa - Żoliborz</option>
+
+                                            <option value="p.338">Prezydent Miasta Włocławek</option>
+
+                                            <option value="p.242">Prezydent Miasta Wrocław</option>
+
+                                            <option value="p.147">Prezydent Miasta Zabrze</option>
+
+                                            <option value="p.439">Prezydent Miasta Zamość</option>
+
+                                            <option value="p.246">Prezydent Miasta Zielona Góra</option>
+
+                                            <option value="p.163">Prezydent Miasta Żory</option>
+
+                                            <option value="w.190">ROOT1</option>
+
+                                            <option value="p.52">Starosta Lubiński</option>
+
+                                            <option value="p.58">Starosta Powiatu Aleksandrów Kujawski</option>
+
+                                            <option value="p.72">Starosta Powiatu Augustów</option>
+
+                                            <option value="p.268">Starosta Powiatu Bartoszyce</option>
+
+                                            <option value="p.37">Starosta Powiatu Będzin (Powiat ziemski)</option>
+
+                                            <option value="p.48">Starosta Powiatu Bełchatów</option>
+
+                                            <option value="p.420">Starosta Powiatu Biała Podlaska</option>
+
+                                            <option value="p.339">Starosta Powiatu Białobrzegi</option>
+
+                                            <option value="p.397">Starosta Powiatu Białogard</option>
+
+                                            <option value="p.73">Starosta Powiatu Białystok</option>
+
+                                            <option value="p.161">Starosta Powiatu Bielsko-Biała</option>
+
+                                            <option value="p.175">Starosta Powiatu Bielsk Podlaski</option>
+
+                                            <option value="p.168">Starosta Powiatu Bieruń</option>
+
+                                            <option value="p.421">Starosta Powiatu Biłgoraj</option>
+
+                                            <option value="p.129">Starosta Powiatu Bochnia</option>
+
+                                            <option value="p.53">Starosta Powiatu Bolesławiec</option>
+
+                                            <option value="p.61">Starosta Powiatu Braniewo</option>
+
+                                            <option value="p.59">Starosta Powiatu Brodnica</option>
+
+                                            <option value="p.93">Starosta Powiatu Brzeg</option>
+
+                                            <option value="p.130">Starosta Powiatu Brzesko</option>
+
+                                            <option value="p.247">Starosta Powiatu Brzeziny</option>
+
+                                            <option value="p.21">Starosta Powiatu Brzozów</option>
+
+                                            <option value="p.105">Starosta Powiatu Busko-Zdrój</option>
+
+                                            <option value="p.320">Starosta Powiatu Bydgoszcz</option>
+
+                                            <option value="p.68">Starosta Powiatu Bytów</option>
+
+                                            <option value="p.422">Starosta Powiatu Chełm</option>
+
+                                            <option value="p.321">Starosta Powiatu Chełmno</option>
+
+                                            <option value="p.286">Starosta Powiatu Chodzież</option>
+
+                                            <option value="p.87">Starosta Powiatu Chojnice</option>
+
+                                            <option value="p.398">Starosta Powiatu Choszczno</option>
+
+                                            <option value="p.126">Starosta Powiatu Chrzanów</option>
+
+                                            <option value="p.340">Starosta Powiatu Ciechanów</option>
+
+                                            <option value="p.158">Starosta Powiatu Cieszyn</option>
+
+                                            <option value="p.287">Starosta Powiatu Czarnków</option>
+
+                                            <option value="p.43">Starosta Powiatu Częstochowa</option>
+
+                                            <option value="p.212">Starosta Powiatu Człuchów</option>
+
+                                            <option value="p.171">Starosta Powiatu Dąbrowa Tarnowska</option>
+
+                                            <option value="p.27">Starosta Powiatu Dębica</option>
+
+                                            <option value="p.399">Starosta Powiatu Drawsko Pomorskie</option>
+
+                                            <option value="p.62">Starosta Powiatu Działdowo</option>
+
+                                            <option value="p.206">Starosta Powiatu Dzierżoniów</option>
+
+                                            <option value="p.269">Starosta Powiatu Elbląg</option>
+
+                                            <option value="p.270">Starosta Powiatu Ełk</option>
+
+                                            <option value="p.341">Starosta Powiatu Garwolin</option>
+
+                                            <option value="p.271">Starosta Powiatu Giżycko</option>
+
+                                            <option value="p.144">Starosta Powiatu Gliwice</option>
+
+                                            <option value="p.208">Starosta Powiatu Głogów</option>
+
+                                            <option value="p.94">Starosta Powiatu Głubczyce</option>
+
+                                            <option value="p.288">Starosta Powiatu Gniezno</option>
+
+                                            <option value="p.90">Starosta Powiatu Gołdap</option>
+
+                                            <option value="p.63">Starosta Powiatu Goleniów</option>
+
+                                            <option value="p.322">Starosta Powiatu Golub-Dobrzyń</option>
+
+                                            <option value="p.207">Starosta Powiatu Góra</option>
+
+                                            <option value="p.135">Starosta Powiatu Gorlice</option>
+
+                                            <option value="p.77">Starosta Powiatu Gorzów Wielkopolski</option>
+
+                                            <option value="p.289">Starosta Powiatu Gostyń</option>
+
+                                            <option value="p.342">Starosta Powiatu Gostynin</option>
+
+                                            <option value="p.188">Starosta Powiatu Grajewo</option>
+
+                                            <option value="p.343">Starosta Powiatu Grodzisk Mazowiecki</option>
+
+                                            <option value="p.290">Starosta Powiatu Grodzisk Wielkopolski</option>
+
+                                            <option value="p.344">Starosta Powiatu Grójec</option>
+
+                                            <option value="p.81">Starosta Powiatu Grudziądz</option>
+
+                                            <option value="p.400">Starosta Powiatu Gryfice</option>
+
+                                            <option value="p.92">Starosta Powiatu Gryfino</option>
+
+                                            <option value="p.74">Starosta Powiatu Hajnówka</option>
+
+                                            <option value="p.423">Starosta Powiatu Hrubieszów</option>
+
+                                            <option value="p.273">Starosta Powiatu Iława</option>
+
+                                            <option value="p.323">Starosta Powiatu Inowrocław</option>
+
+                                            <option value="p.424">Starosta Powiatu Janów Lubelski</option>
+
+                                            <option value="p.291">Starosta Powiatu Jarocin</option>
+
+                                            <option value="p.25">Starosta Powiatu Jarosław</option>
+
+                                            <option value="p.23">Starosta Powiatu Jasło</option>
+
+                                            <option value="p.209">Starosta Powiatu Jawor</option>
+
+                                            <option value="p.106">Starosta Powiatu Jędrzejów</option>
+
+                                            <option value="p.51">Starosta Powiatu Jelenia Góra</option>
+
+                                            <option value="p.292">Starosta Powiatu Kalisz</option>
+
+                                            <option value="p.210">Starosta Powiatu Kamienna Góra</option>
+
+                                            <option value="p.401">Starosta Powiatu Kamień Pomorski</option>
+
+                                            <option value="p.214">Starosta Powiatu Kartuzy</option>
+
+                                            <option value="p.116">Starosta Powiatu Kazimierza Wielka</option>
+
+                                            <option value="p.88">Starosta Powiatu Kędzierzyn-Koźle 	 </option>
+
+                                            <option value="p.293">Starosta Powiatu Kępno</option>
+
+                                            <option value="p.274">Starosta Powiatu Kętrzyn</option>
+
+                                            <option value="p.108">Starosta Powiatu Kielce</option>
+
+                                            <option value="p.139">Starosta Powiatu Kłobuck</option>
+
+                                            <option value="p.211">Starosta Powiatu Kłodzko</option>
+
+                                            <option value="p.137">Starosta Powiatu Kluczbork</option>
+
+                                            <option value="p.31">Starosta Powiatu Kolbuszowa</option>
+
+                                            <option value="p.176">Starosta Powiatu Kolno</option>
+
+                                            <option value="p.45">Starosta Powiatu Koło</option>
+
+                                            <option value="p.403">Starosta Powiatu Kołobrzeg</option>
+
+                                            <option value="p.46">Starosta Powiatu Konin</option>
+
+                                            <option value="p.38">Starosta Powiatu Końskie</option>
+
+                                            <option value="p.295">Starosta Powiatu Kościan</option>
+
+                                            <option value="p.217">Starosta Powiatu Kościerzyna</option>
+
+                                            <option value="p.402">Starosta Powiatu Koszalin</option>
+
+                                            <option value="p.39">Starosta Powiatu Kozienice</option>
+
+                                            <option value="p.123">Starosta Powiatu Kraków</option>
+
+                                            <option value="p.95">Starosta Powiatu Krapkowice</option>
+
+                                            <option value="p.426">Starosta Powiatu Kraśnik</option>
+
+                                            <option value="p.425">Starosta Powiatu Krasnystaw</option>
+
+                                            <option value="p.20">Starosta Powiatu Krosno</option>
+
+                                            <option value="p.197">Starosta Powiatu Krosno Odrzańskie</option>
+
+                                            <option value="p.296">Starosta Powiatu Krotoszyn</option>
+
+                                            <option value="p.49">Starosta Powiatu Kutno</option>
+
+                                            <option value="p.219">Starosta Powiatu Kwidzyn</option>
+
+                                            <option value="p.29">Starosta Powiatu Łańcut</option>
+
+                                            <option value="p.248">Starosta Powiatu Łask</option>
+
+                                            <option value="p.67">Starosta Powiatu Lębork</option>
+
+                                            <option value="p.55">Starosta Powiatu Łęczna</option>
+
+                                            <option value="p.250">Starosta Powiatu Łęczyca</option>
+
+                                            <option value="p.345">Starosta Powiatu Legionowo</option>
+
+                                            <option value="p.213">Starosta Powiatu Legnica</option>
+
+                                            <option value="p.17">Starosta Powiatu Lesko</option>
+
+                                            <option value="p.297">Starosta Powiatu Leszno</option>
+
+                                            <option value="p.32">Starosta Powiatu Leżajsk</option>
+
+                                            <option value="p.275">Starosta Powiatu Lidzbark Warmiński</option>
+
+                                            <option value="p.131">Starosta Powiatu Limanowa</option>
+
+                                            <option value="p.324">Starosta Powiatu Lipno</option>
+
+                                            <option value="p.346">Starosta Powiatu Lipsko</option>
+
+                                            <option value="p.404">Starosta Powiatu Łobez</option>
+
+                                            <option value="p.448">Starosta Powiatu Łódź</option>
+
+                                            <option value="p.89">Starosta Powiatu Łomża</option>
+
+                                            <option value="p.347">Starosta Powiatu Łosice</option>
+
+                                            <option value="p.251">Starosta Powiatu Łowicz</option>
+
+                                            <option value="p.30">Starosta Powiatu Lubaczów</option>
+
+                                            <option value="p.215">Starosta Powiatu Lubań</option>
+
+                                            <option value="p.427">Starosta Powiatu Lubartów</option>
+
+                                            <option value="p.54">Starosta Powiatu Lublin</option>
+
+                                            <option value="p.140">Starosta Powiatu Lubliniec</option>
+
+                                            <option value="p.429">Starosta Powiatu Łuków</option>
+
+                                            <option value="p.216">Starosta Powiatu Lwówek Śląski</option>
+
+                                            <option value="p.348">Starosta Powiatu Maków Mazowiecki</option>
+
+                                            <option value="p.220">Starosta Powiatu Malbork</option>
+
+                                            <option value="p.121">Starosta Powiatu Miechów</option>
+
+                                            <option value="p.298">Starosta Powiatu Międzychód</option>
+
+                                            <option value="p.75">Starosta Powiatu Międzyrzecz</option>
+
+                                            <option value="p.33">Starosta Powiatu Mielec</option>
+
+                                            <option value="p.162">Starosta Powiatu Mikołów</option>
+
+                                            <option value="p.218">Starosta Powiatu Milicz</option>
+
+                                            <option value="p.349">Starosta Powiatu Mińsk Mazowiecki</option>
+
+                                            <option value="p.78">Starosta Powiatu Mława</option>
+
+                                            <option value="p.325">Starosta Powiatu Mogilno</option>
+
+                                            <option value="p.177">Starosta Powiatu Mońki</option>
+
+                                            <option value="p.276">Starosta Powiatu Mrągowo</option>
+
+                                            <option value="p.14">Starosta Powiatu Myślenice</option>
+
+                                            <option value="p.405">Starosta Powiatu Myślibórz</option>
+
+                                            <option value="p.141">Starosta Powiatu Myszków</option>
+
+                                            <option value="p.326">Starosta Powiatu Nakło</option>
+
+                                            <option value="p.103">Starosta Powiatu Namysłów</option>
+
+                                            <option value="p.277">Starosta Powiatu Nidzica</option>
+
+                                            <option value="p.34">Starosta Powiatu Nisko</option>
+
+                                            <option value="p.199">Starosta Powiatu Nowa Sól</option>
+
+                                            <option value="p.278">Starosta Powiatu Nowe Miasto Lubawskie</option>
+
+                                            <option value="p.223">Starosta Powiatu Nowy Dwór Gdański</option>
+
+                                            <option value="p.350">Starosta Powiatu Nowy Dwór Mazowiecki</option>
+
+                                            <option value="p.174">Starosta Powiatu Nowy Sącz</option>
+
+                                            <option value="p.132">Starosta Powiatu Nowy Targ</option>
+
+                                            <option value="p.299">Starosta Powiatu Nowy Tomyśl</option>
+
+                                            <option value="p.70">Starosta Powiatu Nysa</option>
+
+                                            <option value="p.300">Starosta Powiatu Oborniki Wielkopolskie</option>
+
+                                            <option value="p.80">Starosta Powiatu Oława</option>
+
+                                            <option value="p.279">Starosta Powiatu Olecko</option>
+
+                                            <option value="p.221">Starosta Powiatu Oleśnica</option>
+
+                                            <option value="p.96">Starosta Powiatu Olesno</option>
+
+                                            <option value="p.120">Starosta Powiatu Olkusz</option>
+
+                                            <option value="p.280">Starosta Powiatu Olsztyn</option>
+
+                                            <option value="p.109">Starosta Powiatu Opatów</option>
+
+                                            <option value="p.252">Starosta Powiatu Opoczno</option>
+
+                                            <option value="p.69">Starosta Powiatu Opole</option>
+
+                                            <option value="p.281">Starosta Powiatu Ostróda</option>
+
+                                            <option value="p.352">Starosta Powiatu Ostrołęka</option>
+
+                                            <option value="p.351">Starosta Powiatu Ostrowia Mazowiecka</option>
+
+                                            <option value="p.41">Starosta Powiatu Ostrowiec Świętokrzyski</option>
+
+                                            <option value="p.301">Starosta Powiatu Ostrów Wielkopolski</option>
+
+                                            <option value="p.302">Starosta Powiatu Ostrzeszów</option>
+
+                                            <option value="p.127">Starosta Powiatu Oświęcim</option>
+
+                                            <option value="p.353">Starosta Powiatu Otwock</option>
+
+                                            <option value="p.253">Starosta Powiatu Pabianice</option>
+
+                                            <option value="p.254">Starosta Powiatu Pajęczno</option>
+
+                                            <option value="p.431">Starosta Powiatu Parczew</option>
+
+                                            <option value="p.354">Starosta Powiatu Piaseczno</option>
+
+                                            <option value="p.303">Starosta Powiatu Piła</option>
+
+                                            <option value="p.110">Starosta Powiatu Pińczów</option>
+
+                                            <option value="p.255">Starosta Powiatu Piotrków Trybunalski</option>
+
+                                            <option value="p.60">Starosta Powiatu Pisz</option>
+
+                                            <option value="p.304">Starosta Powiatu Pleszew</option>
+
+                                            <option value="p.359">Starosta Powiatu Płock</option>
+
+                                            <option value="p.360">Starosta Powiatu Płońsk</option>
+
+                                            <option value="p.256">Starosta Powiatu Poddębice</option>
+
+                                            <option value="p.406">Starosta Powiatu Police</option>
+
+                                            <option value="p.222">Starosta Powiatu Polkowice</option>
+
+                                            <option value="p.305">Starosta Powiatu Poznań</option>
+
+                                            <option value="p.122">Starosta Powiatu Proszowice</option>
+
+                                            <option value="p.97">Starosta Powiatu Prudnik</option>
+
+                                            <option value="p.236">Starosta Powiatu Pruszcz Gdański</option>
+
+                                            <option value="p.355">Starosta Powiatu Pruszków</option>
+
+                                            <option value="p.356">Starosta Powiatu Przasnysz</option>
+
+                                            <option value="p.22">Starosta Powiatu Przemyśl</option>
+
+                                            <option value="p.28">Starosta Powiatu Przeworsk</option>
+
+                                            <option value="p.357">Starosta Powiatu Przysucha</option>
+
+                                            <option value="p.160">Starosta Powiatu Pszczyna</option>
+
+                                            <option value="p.225">Starosta Powiatu Puck</option>
+
+                                            <option value="p.432">Starosta Powiatu Puławy</option>
+
+                                            <option value="p.358">Starosta Powiatu Pułtusk</option>
+
+                                            <option value="p.407">Starosta Powiatu Pyrzyce</option>
+
+                                            <option value="p.166">Starosta Powiatu Racibórz</option>
+
+                                            <option value="p.361">Starosta Powiatu Radom</option>
+
+                                            <option value="p.257">Starosta Powiatu Radomsko</option>
+
+                                            <option value="p.57">Starosta Powiatu Radziejów</option>
+
+                                            <option value="p.433">Starosta Powiatu Radzyń Podlaski</option>
+
+                                            <option value="p.258">Starosta Powiatu Rawa</option>
+
+                                            <option value="p.306">Starosta Powiatu Rawicz</option>
+
+                                            <option value="p.26">Starosta Powiatu Ropczyce</option>
+
+                                            <option value="p.156">Starosta Powiatu Rybnik</option>
+
+                                            <option value="p.434">Starosta Powiatu Ryki</option>
+
+                                            <option value="p.327">Starosta Powiatu Rypin</option>
+
+                                            <option value="p.16">Starosta Powiatu Rzeszów</option>
+
+                                            <option value="p.42">Starosta Powiatu Sandomierz</option>
+
+                                            <option value="p.19">Starosta Powiatu Sanok</option>
+
+                                            <option value="p.178">Starosta Powiatu Sejny</option>
+
+                                            <option value="p.328">Starosta Powiatu Sępólno Krajeńskie</option>
+
+                                            <option value="p.362">Starosta Powiatu Siedlce</option>
+
+                                            <option value="p.179">Starosta Powiatu Siemiatycze</option>
+
+                                            <option value="p.259">Starosta Powiatu Sieradz</option>
+
+                                            <option value="p.363">Starosta Powiatu Sierpc</option>
+
+                                            <option value="p.111">Starosta Powiatu Skarżysko-Kamienna</option>
+
+                                            <option value="p.410">Starosta Powiatu Sławno</option>
+
+                                            <option value="p.202">Starosta Powiatu Słubice</option>
+
+                                            <option value="p.308">Starosta Powiatu Słupca</option>
+
+                                            <option value="p.226">Starosta Powiatu Słupsk</option>
+
+                                            <option value="p.364">Starosta Powiatu Sochaczew</option>
+
+                                            <option value="p.180">Starosta Powiatu Sokółka</option>
+
+                                            <option value="p.365">Starosta Powiatu Sokołów</option>
+
+                                            <option value="p.310">Starosta Powiatu Śrem</option>
+
+                                            <option value="p.416">Starosta Powiatu Środa Śląska</option>
+
+                                            <option value="p.309">Starosta Powiatu Środa Wielkopolska</option>
+
+                                            <option value="p.36">Starosta Powiatu Stalowa Wola</option>
+
+                                            <option value="p.112">Starosta Powiatu Starachowice</option>
+
+                                            <option value="p.408">Starosta Powiatu Stargard Szczeciński</option>
+
+                                            <option value="p.228">Starosta Powiatu Starogard Gdański</option>
+
+                                            <option value="p.104">Starosta Powiatu Staszów</option>
+
+                                            <option value="p.200">Starosta Powiatu Strzelce Krajeńskie</option>
+
+                                            <option value="p.98">Starosta Powiatu Strzelce Opolskie</option>
+
+                                            <option value="p.224">Starosta Powiatu Strzelin</option>
+
+                                            <option value="p.24">Starosta Powiatu Strzyżów</option>
+
+                                            <option value="p.15">Starosta Powiatu Sucha Beskidzka</option>
+
+                                            <option value="p.201">Starosta Powiatu Sulęcin</option>
+
+                                            <option value="p.181">Starosta Powiatu Suwałki</option>
+
+                                            <option value="p.227">Starosta Powiatu Świdnica</option>
+
+                                            <option value="p.56">Starosta Powiatu Świdnik</option>
+
+                                            <option value="p.411">Starosta Powiatu Świdwin</option>
+
+                                            <option value="p.203">Starosta Powiatu Świebodzin</option>
+
+                                            <option value="p.329">Starosta Powiatu Świecie</option>
+
+                                            <option value="p.307">Starosta Powiatu Szamotuły</option>
+
+                                            <option value="p.409">Starosta Powiatu Szczecinek</option>
+
+                                            <option value="p.282">Starosta Powiatu Szczytno</option>
+
+                                            <option value="p.418">Starosta Powiatu Sztum</option>
+
+                                            <option value="p.366">Starosta Powiatu Szydłowiec</option>
+
+                                            <option value="p.35">Starosta Powiatu Tarnobrzeg</option>
+
+                                            <option value="p.85">Starosta Powiatu Tarnów</option>
+
+                                            <option value="p.143">Starosta Powiatu Tarnowskie Góry</option>
+
+                                            <option value="p.230">Starosta Powiatu Tczew</option>
+
+                                            <option value="p.435">Starosta Powiatu Tomaszów Lubelski</option>
+
+                                            <option value="p.261">Starosta Powiatu Tomaszów Mazowiecki</option>
+
+                                            <option value="p.330">Starosta Powiatu Toruń</option>
+
+                                            <option value="p.229">Starosta Powiatu Trzebnica</option>
+
+                                            <option value="p.331">Starosta Powiatu Tuchola</option>
+
+                                            <option value="p.311">Starosta Powiatu Turek</option>
+
+                                            <option value="p.18">Starosta Powiatu Ustrzyki Dolne</option>
+
+                                            <option value="p.332">Starosta Powiatu Wąbrzeźno</option>
+
+                                            <option value="p.128">Starosta Powiatu Wadowice</option>
+
+                                            <option value="p.314">Starosta Powiatu Wągrowiec</option>
+
+                                            <option value="p.231">Starosta Powiatu Wałbrzych</option>
+
+                                            <option value="p.412">Starosta Powiatu Wałcz</option>
+
+                                            <option value="p.367">Starosta Powiatu Warszawskiego Zachodniego</option>
+
+                                            <option value="p.283">Starosta Powiatu Węgorzewo</option>
+
+                                            <option value="p.368">Starosta Powiatu Węgrów</option>
+
+                                            <option value="p.66">Starosta Powiatu Wejherowo</option>
+
+                                            <option value="p.125">Starosta Powiatu Wieliczka</option>
+
+                                            <option value="p.444">Starosta Powiatu Wieluń</option>
+
+                                            <option value="p.262">Starosta Powiatu Wieruszów</option>
+
+                                            <option value="p.333">Starosta Powiatu Włocławek</option>
+
+                                            <option value="p.436">Starosta Powiatu Włodawa</option>
+
+                                            <option value="p.117">Starosta Powiatu Włoszczowa</option>
+
+                                            <option value="p.159">Starosta Powiatu Wodzisław Śląski</option>
+
+                                            <option value="p.369">Starosta Powiatu Wołomin</option>
+
+                                            <option value="p.232">Starosta Powiatu Wołów</option>
+
+                                            <option value="p.312">Starosta Powiatu Wolsztyn</option>
+
+                                            <option value="p.233">Starosta Powiatu Wrocław</option>
+
+                                            <option value="p.313">Starosta Powiatu Września</option>
+
+                                            <option value="p.76">Starosta Powiatu Wschowa</option>
+
+                                            <option value="p.182">Starosta Powiatu Wysokie Mazowieckie</option>
+
+                                            <option value="p.370">Starosta Powiatu Wyszków</option>
+
+                                            <option value="p.235">Starosta Powiatu Ząbkowice Śląskie</option>
+
+                                            <option value="p.195">Starosta Powiatu Żagań</option>
+
+                                            <option value="p.133">Starosta Powiatu Zakopane</option>
+
+                                            <option value="p.183">Starosta Powiatu Zambrów</option>
+
+                                            <option value="p.437">Starosta Powiatu Zamość</option>
+
+                                            <option value="p.83">Starosta Powiatu Żary</option>
+
+                                            <option value="p.142">Starosta Powiatu Zawiercie</option>
+
+                                            <option value="p.263">Starosta Powiatu Zduńska Wola</option>
+
+                                            <option value="p.264">Starosta Powiatu Zgierz</option>
+
+                                            <option value="p.234">Starosta Powiatu Zgorzelec</option>
+
+                                            <option value="p.205">Starosta Powiatu Zielona Góra</option>
+
+                                            <option value="p.315">Starosta Powiatu Złotów</option>
+
+                                            <option value="p.334">Starosta Powiatu Żnin</option>
+
+                                            <option value="p.372">Starosta Powiatu Żuromin</option>
+
+                                            <option value="p.371">Starosta Powiatu Zwoleń</option>
+
+                                            <option value="p.373">Starosta Powiatu Żyrardów</option>
+
+                                            <option value="p.44">Starosta Powiatu Żywiec</option>
+
+                                            <option value="p.450">Starostwa Powiatu Pabianice oddział Konstantynów Łódzki</option>
+
+                                            <option value="p.430">Starostwo Powiatowe w Opolu Lubelskim</option>
+
+                                            <option value="p.260">Starostwo Powiatowe w Skierniewicach</option>
+
+                                            <option value="p.237">Starostwo Powiatu Złotoryja</option>
+
+                                            <option value="w.187">Wojewoda Dolnośląski</option>
+
+                                            <option value="w.146">Wojewoda Kujawsko - Pomorski</option>
+
+                                            <option value="w.148">Wojewoda Kujawsko - Pomorski - Delegatura we Włocławku</option>
+
+                                            <option value="w.147">Wojewoda Kujawsko - Pomorski - Delegatura w Toruniu</option>
+
+                                            <option value="w.152">Wojewoda Łódzki</option>
+
+                                            <option value="w.149">Wojewoda Lubelski</option>
+
+                                            <option value="w.150">Wojewoda Lubelski - Delegatura w Chełmie</option>
+
+                                            <option value="w.151">Wojewoda Lubuski</option>
+
+                                            <option value="w.156">Wojewoda Małopolski</option>
+
+                                            <option value="w.157">Wojewoda Małopolski - Delegatura w Nowym Sączu</option>
+
+                                            <option value="w.158">Wojewoda Małopolski - Delegatura w Tarnowie</option>
+
+                                            <option value="w.159">Wojewoda Mazowiecki</option>
+
+                                            <option value="w.161">Wojewoda Mazowiecki - Delegatura w Ostrołęce</option>
+
+                                            <option value="w.162">Wojewoda Mazowiecki - Delegatura w Płocku</option>
+
+                                            <option value="w.163">Wojewoda Mazowiecki - Delegatura w Radomiu</option>
+
+                                            <option value="w.164">Wojewoda Mazowiecki - Delegatura w Siedlcach</option>
+
+                                            <option value="w.160">Wojewoda Mazowiecki - Delegaura w Ciechanowie</option>
+
+                                            <option value="w.165">Wojewoda Opolski</option>
+
+                                            <option value="w.166">Wojewoda Podkarpacki</option>
+
+                                            <option value="w.167">Wojewoda Podkarpacki - Delegatura w Krośnie</option>
+
+                                            <option value="w.168">Wojewoda Podkarpacki - Delegatura w Przemyślu</option>
+
+                                            <option value="w.169">Wojewoda Podkarpacki - Delegatura w Tarnobrzegu</option>
+
+                                            <option value="w.170">Wojewoda Podlaski</option>
+
+                                            <option value="w.171">Wojewoda Podlaski - Delegatura w Łomży</option>
+
+                                            <option value="w.172">Wojewoda Pomorski</option>
+
+                                            <option value="w.173">Wojewoda Pomorski - Delegatura w Słupsku</option>
+
+                                            <option value="w.174">Wojewoda Śląski</option>
+
+                                            <option value="w.175">Wojewoda Śląski - Delegatura w Bielsko-Białej</option>
+
+                                            <option value="w.176">Wojewoda Śląski - Delegatura w Częstochowie</option>
+
+                                            <option value="w.177">Wojewoda Świętokrzyski</option>
+
+                                            <option value="w.178">Wojewoda Warmińsko-Mazurski</option>
+
+                                            <option value="w.179">Wojewoda Warmińsko-Mazurski - Delegatura w Elblągu</option>
+
+                                            <option value="w.180">Wojewoda Wielkopolski</option>
+
+                                            <option value="w.189">Wojewoda Wielkopolski - Delegatura w Kaliszu</option>
+
+                                            <option value="w.181">Wojewoda Wielkopolski - Delegatura w Koninie</option>
+
+                                            <option value="w.182">Wojewoda Wielkopolski - Delegatura w Lesznie</option>
+
+                                            <option value="w.183">Wojewoda Wielkopolski - Delegatura w Pile</option>
+
+                                            <option value="w.184">Wojewoda Zachodniopomorski</option>
+
+                                            <option value="w.185">Wojewoda Zachodniopomorski - Delegatura w Koszalinie</option>
+
+                                    </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <h4 class="col-sm-offset-4 col-sm-6 text-primary">Informacje o obiekcie</h4>
+        </div>
+
+        <div class="form-group">
+                        <label for="region" class="col-sm-4 control-label">Województwo</label>
+            <div class="col-sm-6">
+                <select class="form-control" name="region" id="region">
+                                            <option value="all">Cała Polska</option>
+
+					                        <option value="-1">polski obszar morski</option>
+
+					                        <option value="259">dolnośląskie</option>
+
+					                        <option value="260">kujawsko-pomorskie</option>
+
+					                        <option value="261">łódzkie</option>
+
+					                        <option value="5">lubelskie</option>
+
+					                        <option value="6">lubuskie</option>
+
+					                        <option value="7">małopolskie</option>
+
+					                        <option value="8">mazowieckie</option>
+
+					                        <option value="9">opolskie</option>
+
+					                        <option value="10">podkarpackie</option>
+
+					                        <option value="11">podlaskie</option>
+
+					                        <option value="12">pomorskie</option>
+
+					                        <option value="13">śląskie</option>
+
+					                        <option value="14">świętokrzyskie</option>
+
+					                        <option value="262">warmińsko-mazurskie</option>
+
+					                        <option value="15">wielkopolskie</option>
+
+					                        <option value="16">zachodniopomorskie</option>
+
+					                </select>
+            </div>
+        </div>
+        <div class="form-group">
+                        <label for="city" class="col-sm-4 control-label">Miejscowość</label>
+            <div class="col-sm-6">
+                <input class="form-control ui-autocomplete-input" name="city" id="city" value="" autocomplete="off">
+            </div>
+        </div>
+        <div class="form-group">
+                        <label for="street" class="col-sm-4 control-label">Ulica</label>
+            <div class="col-sm-6">
+                <input class="form-control ui-autocomplete-input" name="street" id="street" value="" autocomplete="off">
+            </div>
+        </div>
+        <div class="form-group">
+                        <label for="house_nr" class="col-sm-4 control-label">Numer domu</label>
+            <div class="col-sm-6">
+                <input class="form-control" name="house_nr" id="house_nr" value="">
+            </div>
+        </div>
+        
+        
+        <div class="form-group">
+            <label for="ew_parcel" class="col-sm-4 control-label">Nr działki ew.</label>
+            <div class="col-sm-6">
+                <div class="input-group">
+                    <input class="form-control" name="ew_parcel" id="ew_parcel" value="">
+                    <div class="input-group-btn">
+                        <button id="ew-parcel-help" style="" type="button" class="btn btn-default" aria-label="Pomoc" data-toggle="tooltip" data-placement="top" title="" data-original-title="W celu zwiększenia precyzji wyników wyszukiwania, oprócz numeru działki należy dodatkowo podać inne informacje precyzujące lokalizację inwestycji, np. obręb ewidencyjny, organ administracji lub adres obiektu budowlanego.">
+                            <span class="glyphicon glyphicon-question-sign"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+                        <div class="sr-only">
+                <span id="helpBlock" class="sr-only col-sm-offset-4 col-sm-6 help-block">Podaj numer obrębu w formacie XXXXXX_X.XXXX</span>
+            </div>
+            
+            <label for="ew_organ" class="col-sm-4 control-label">Obręb ew.</label>
+            <div class="col-sm-6">
+                <input class="form-control" name="ew_organ" id="ew_organ" value="" placeholder="Podaj nr obrębu w formacie XXXXXX_X.XXXX">
+            </div>
+        </div>
+        <div class="form-group">
+                        <label for="ew_sheet" class="col-sm-4 control-label">Arkusz mapy</label>
+            <div class="col-sm-6">
+                <input class="form-control" name="ew_sheet" id="ew_sheet" value="">
+            </div>
+        </div>
+        
+        <div class="row">
+            <h4 class="col-sm-offset-4 col-sm-6 text-primary">Zamierzenie budowlane</h4>
+        </div>
+
+        <div class="form-group">
+                        <label for="invest_purpose" class="col-sm-4 control-label">Rodzaj zamierzenia budowlanego</label>
+            <div class="col-sm-6">
+                <select class="form-control" name="invest_purpose" id="invest_purpose">
+                                            <option value="all">Dowolne</option>
+
+					                        <option value="1">budowa nowego/nowych obiektów budowlanych</option>
+
+					                        <option value="2">rozbudowa istniejącego/istniejących obiektów budowlanych</option>
+
+					                        <option value="3">nadbudowa istniejącego/istniejących obiektów budowlanych</option>
+
+					                        <option value="4">odbudowa istniejącego/istniejących obiektów budowlanych</option>
+
+					                        <option value="5">rozbiórka istniejącego obiektu budowlanego</option>
+
+					                        <option value="6">wykonanie robót budowlanych innych niż wymienione powyżej</option>
+
+					                </select>
+            </div>
+        </div>
+        <div class="form-group">
+                        <label for="invest" class="col-sm-4 control-label">Kategoria obiektu</label>
+            <div class="col-sm-6">
+                <select class="form-control" name="invest" id="invest">
+                                            <option value="all">Dowolna</option>
+
+					                        <option value="2">I</option>
+
+					                        <option value="64">II</option>
+
+					                        <option value="65">III</option>
+
+					                        <option value="63">IV</option>
+
+					                        <option value="59">V</option>
+
+					                        <option value="62">VI</option>
+
+					                        <option value="50">VII</option>
+
+					                        <option value="61">VIII</option>
+
+					                        <option value="22">IX</option>
+
+					                        <option value="71">X</option>
+
+					                        <option value="60">XI</option>
+
+					                        <option value="72">XII</option>
+
+					                        <option value="73">XIII</option>
+
+					                        <option value="51">XIV</option>
+
+					                        <option value="58">XV</option>
+
+					                        <option value="52">XVI</option>
+
+					                        <option value="54">XVII</option>
+
+					                        <option value="53">XVIII</option>
+
+					                        <option value="55">XIX</option>
+
+					                        <option value="74">XX</option>
+
+					                        <option value="57">XXI</option>
+
+					                        <option value="49">XXII</option>
+
+					                        <option value="56">XXIII</option>
+
+					                        <option value="75">XXIV</option>
+
+					                        <option value="76">XXV</option>
+
+					                        <option value="79">XXVI</option>
+
+					                        <option value="77">XXVII</option>
+
+					                        <option value="78">XXVIII</option>
+
+					                        <option value="80">XXIX</option>
+
+					                        <option value="81">XXX</option>
+
+					                </select>
+            </div>
+            <div class="col-sm-offset-4 col-sm-6" id="invest_description"></div>
+        </div>
+        <div class="form-group">
+                        <label for="intention_name" class="col-sm-4 control-label">Nazwa zamierzenia</label>
+            <div class="col-sm-6">
+                <input class="form-control" name="intention_name" id="intention_name" value="">
+            </div>
+        </div>
+
+        <div id="captcha" class="row">
+            <h4 class="col-sm-offset-4 col-sm-6 text-primary">Zabezpieczenie (pole obowiązkowe)</h4>
+        </div>
+
+        <div class="form-group">
+                        <label for="sec_code" class="col-sm-4 control-label">Wpisz kod znajdujący się na obrazku poniżej:</label>
+            <div class="col-sm-6">
+                <input class="form-control" name="sec_code" id="sec_code" autocomplete="off">
+                <audio id="captcha_image_audio" preload="none" style="display: none">
+                    <source id="captcha_image_source_mp3" src="/securimage_play.php?id=1777630931&amp;format=mp3" type="audio/mpeg">
+                    <source id="captcha_image_source_wav" src="/securimage_play.php?id=1777630931" type="audio/wav">
+                    
+                </audio>
+                <img id="sec_code_captcha" src="/securimage_show.php?1777630931" alt="CAPTCHA">
+            </div>
+                        <div class="col-sm-1" id="captcha_image_audio_controls">
+                <!-- play button and loading image that gets toggled when audio is loading -->
+                    <a class="captcha_play_button" href="/securimage_play.php?id=1777630931" onclick="return false">
+                    <img class="captcha_play_image" height="32" width="32" src="/Img/audio_icon.png" alt="Wypowiedz kod captcha" style="border: 0px">
+              <!--      <img class="captcha_loading_image rotating" height="32" width="32" src="images/loading.png" alt="Loading audio" style="display: none">-->
+                    </a>
+                    <noscript>Włącz Javascript aby wypowiedzieć captchę</noscript>
+            </div>
+                    </div>
+
+        <div class="col-md-offset-4">
+            <button type="submit" name="submit" value="submit" class="btn btn-default search"><span class="glyphicon glyphicon-search text-primary" aria-hidden="true"></span> Wyszukaj</button>
+        </div>
+
+
+    </form>
+
+    <script type="text/javascript" src="/securimage.js"></script>
+    <script type="text/javascript">
+        captcha_image2_audioObj = new SecurimageAudio({ audioElement: 'captcha_image_audio', controlsElement: 'captcha_image_audio_controls' });
+    </script>
+
+</div>
+<p id="counter" class="font-smaller text-right" style="display: none">Licznik odwiedzin: <span id="counter-num"></span></p>
+
+            </div>
+
+                        <div id="content" class="footer col-lg-offset-3 col-md-offset-2 col-md-10 col-lg-7">
+                    </div>
+
+        <script src="https://wyszukiwarka.gunb.gov.pl//Js/bootstrap.min.js"></script>
+        <script src="https://wyszukiwarka.gunb.gov.pl//Js/bootstrap-datepicker.min.js"></script>
+        <script src="https://wyszukiwarka.gunb.gov.pl//Js/script.js"></script>
+        <script src="https://wyszukiwarka.gunb.gov.pl//Js/map/config/cities.js"></script>
+    
+
+</div><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-2" tabindex="0" style="display: none;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><div id="startquestion-container"><style>
+    
+  
+@-webkit-keyframes sq-scale-in-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes sq-scale-in-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sq-scale-in-right {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes sq-scale-in-right {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sq-scale-in-top {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes sq-scale-in-top {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sq-scale-in-bottom {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes sq-scale-in-bottom {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sq-scale-in-top-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes sq-scale-in-top-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sq-scale-in-top-right {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes sq-scale-in-top-right {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 0%;
+            transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sq-scale-in-bottom-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes sq-scale-in-bottom-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sq-scale-in-bottom-right {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes sq-scale-in-bottom-right {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes sq-fade-in {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes sq-fade-in {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+  
+.sq-entrance-center-left {
+  -webkit-animation: sq-scale-in-left 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: sq-scale-in-left 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.sq-entrance-center-right {
+  -webkit-animation: sq-scale-in-right 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: sq-scale-in-right 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.sq-entrance-top-center {
+  -webkit-animation: sq-scale-in-top 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: sq-scale-in-top 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.sq-entrance-bottom-center {
+  -webkit-animation: sq-scale-in-bottom 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: sq-scale-in-bottom 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.sq-entrance-top-left {
+  -webkit-animation: sq-scale-in-top-left 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: sq-scale-in-top-left 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.sq-entrance-top-right {
+  -webkit-animation: sq-scale-in-top-right 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: sq-scale-in-top-right 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.sq-entrance-bottom-left {
+  -webkit-animation: sq-scale-in-bottom-left 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: sq-scale-in-bottom-left 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.sq-entrance-bottom-right {
+  -webkit-animation: sq-scale-in-bottom-right 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: sq-scale-in-bottom-right 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.sq-entrance-center-center {
+  -webkit-animation: sq-fade-in 0.35s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: sq-fade-in 0.35s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+  </style></div></body></html>

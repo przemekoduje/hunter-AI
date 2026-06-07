@@ -1,0 +1,77 @@
+{
+  "name": "Zadanie 15: Hunter AI RWDZ to MongoDB",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "rwdz-leads",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json.miejscowosc}}",
+              "operation": "isNotEmpty"
+            },
+            {
+              "value1": "={{$json.nr_dzialki_ewid}}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "name": "Walidacja Danych",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "collection": "Lead",
+        "operation": "update",
+        "upsert": true,
+        "query": "={\n  \"nr_dzialki_ewid\": \"{{$json.nr_dzialki_ewid}}\",\n  \"obreb_ewid\": \"{{$json.obreb_ewid}}\"\n}",
+        "updateKey": "nr_dzialki_ewid",
+        "fields": "data_wydania_decyzji, miejscowosc, inwestor, nr_dzialki_ewid, obreb_ewid, jednostka_ew, trace_id",
+        "options": {}
+      },
+      "name": "Zapis do MongoDB",
+      "type": "n8n-nodes-base.mongoDb",
+      "typeVersion": 1,
+      "position": [700, 280]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Walidacja Danych",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Walidacja Danych": {
+      "main": [
+        [
+          {
+            "node": "Zapis do MongoDB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {}
+}
